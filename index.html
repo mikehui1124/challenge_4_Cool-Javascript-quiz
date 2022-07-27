@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./assets/style_main.css" />
+    <title>JavaScript Quiz</title>
+  </head>
+  
+  <body>
+    <header>
+        <nav>
+            <a href= "score.html">View High Scores</a>
+            <div class= "timer">                
+                <h2 class="align-right">Time: <span id= "timer-count">60</span> sec 🔥</h2>                
+            </div>
+        </nav>
+
+        <div class= "large-font">JavaScript Quiz Challenge 🚀</div>        
+        <p id="introText">Try to answer the following code-related quetsions within the time limit. 
+            Press Option Button to answer a question, after that Press Next Question button to move to the next question. Keep in mind the incorrect answer will penalize your score/time by 3 seconds!</p>
+        
+        <button class="start-button">Start Quiz</button>
+        <br> </br>
+    </header>
+
+    <main>
+        <section>
+            <div class="visible">
+              <div class="question">JAVASCRIPT QUESTION</div>          
+            </div>
+        </section>
+    <!-- Option Card and Option buttons section--> 
+        <section>
+            <ul class="option">
+                <div id= "optionCard" class="hidden" >
+                    <div class="nil">                        
+                        <button class="inline button-1" data-option="option_1">Option 1</button>
+                        <li id= "option1" class="inline"> </li>                        
+                    </div>              
+                    <div class="nil">
+                        <button class="inline button-2" data-option="option_2">Option 2</button>
+                        <li id= "option2" class="inline"> </li>
+                    </div>
+                    <div class="nil">
+                        <button class="inline button-3" data-option="option_3">Option 3</button>
+                        <li id= "option3" class="inline"> </li>
+                    </div>
+                    <div class="nil">
+                        <button class="inline button-4" data-option="option_4">Option 4</button>
+                        <li id= "option4" class="inline"> </li>
+                    </div>    
+                </div>               
+
+            </ul>
+            <br> </br>
+            <button id="button-next" class="hidden">Next Question</button> 
+        </section>
+
+        <section>
+            <div class="message">
+                <h2 id = "answer-message">correct or wrong</h2>                
+            </div>
+        </section>  
+        <!-- End message section-->   
+        <section>
+            <div id= 'end-message' class="hidden">
+                <h3 >Your Score is <span class="endScore"></span> sec</h3>
+                <h3 id="nameinput" >Enter your name <input type="text" id="username" placeholder="Your name please?" /></h3>
+                <a href = "score.html"><button class="button-submit" >Submit</button></a>               
+            </div>
+        </section>  
+    </main>   
+    
+    <script src="./assets/script.js"></script>
+  </body>
+</html>
