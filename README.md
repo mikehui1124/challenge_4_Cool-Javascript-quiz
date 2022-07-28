@@ -14,7 +14,7 @@ https://mikehui1124.github.io/challenge_4_Cool-Javascript-quiz/index.html
 
 Brief description
 
-The main page display instructions of the quiz at the beginning. A timer starts and each question is displayed in turn when user clicks Start button. A 3-sec deduction applies when a wrong answer is selected.
+The main page displays instructions of the quiz at the beginning. A timer starts and each question is displayed in turn when user clicks Start button. A 3-sec deduction applies when a wrong answer is selected.
 The second page opens when user submit his name to the quiz, then a high scores board emerges with the user’s input name. High Score record can be reset, or user may return to the main page and re-join the quiz challenge again for higher score.
 
 Snapshot of Main page and the Second page
@@ -48,17 +48,18 @@ Special Features to Quiz and Validation Functionality
 Two advanced features in JavaScript are used to realize the main purpose of quiz and the required validations, 
 while keeping the code clean and concise. The main JavaScript file is completed without the use of JQuery API in roughly 180 lines only.
 
--	Firstly, a master object is created to hold the arrays of 4 possible options by specific key strings for each question, awaiting to be 
-called when rendering the possible choices later. Next, specific key string is constructed for each question, which passes back to the
-master object to fetch the right array of 4 possible options (ie. using objectName[“key string”][array index] syntax)
+-	Firstly, a master object is created to hold the arrays of 4 possible options sorted by specific key strings for each question, awaiting to be 
+called upen when rendering the possible choices later. Next, specific key string is constructed for each question, which passes back to the
+master object to fetch the right array holding the text of 4 possible options (ie. using objectName[“key string”][array index] syntax).
 
 ![image](https://user-images.githubusercontent.com/105307687/181306782-c7099261-5758-431a-a226-4f6621f32c2d.png)
 ![image](https://user-images.githubusercontent.com/105307687/181306811-921e9b05-cced-4c20-8c43-72cff8768e48.png)
 
 
--	Secondly, the validation of submitted answer and time penalty is realised using one setInterval() method. Firstly, the method controls 
+-	Secondly, the validation of submitted answer and time penalty is realised using one setInterval() method. First of all the method controls 
 normal countdown and the time-up response as usual. In addition, before the last question is answered, the same method also control time 
-penalty and update the remaining time when user submit a wrong answer. This arrangement consolidates the main validation logic in one method and keep the code concise.
+penalty and update the remaining time in real-time when user submit a wrong answer. This arrangement consolidates the main validation logic in 
+one method and keep the code concise.
 
 ![image](https://user-images.githubusercontent.com/105307687/181306907-7554efa3-6dfa-497f-8261-b2b3384be697.png)
 
